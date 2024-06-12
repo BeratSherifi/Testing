@@ -1,70 +1,122 @@
-# Getting Started with Create React App
+# Word Guess Game
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Overview
 
-## Available Scripts
+The Word Guess Game is an interactive and fun web application where users can guess a word by selecting letters. The game includes different difficulty levels, a timer, and hints to help users guess the word. The application also supports user registration and login functionalities to enhance the user experience.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- **Frontend:**
+  - React
+  - CSS
+  - Cypress (for end-to-end testing)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Backend:**
+  - Node.js
+  - Express.js
+  - SQLite (for user data storage)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
 
-### `npm test`
+- User Registration and Login
+- Difficulty Levels (Easy, Medium, Hard)
+- Timer for each game session
+- Hint functionality
+- Letter removal feature
+- Score tracking
+- Game restart option
+- Logout functionality
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup Instructions
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js and npm installed
+- Git installed
+- SQLite installed
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Backend Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository:**
 
-### `npm run eject`
+    ```sh
+    git clone https://github.com/BeratSherifi/Testing.git
+    cd your-repo/backend
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Install Dependencies:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```sh
+    npm install
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Run the Backend Server:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    ```sh
+    node src/index.js
+    ```
 
-## Learn More
+   The backend server will start on `http://localhost:5000`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Frontend Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Navigate to Frontend Directory:**
 
-### Code Splitting
+    ```sh
+    cd ../frontend
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Install Dependencies:**
 
-### Analyzing the Bundle Size
+    ```sh
+    npm install
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. **Run the Frontend Application:**
 
-### Making a Progressive Web App
+    ```sh
+    npm start
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   The frontend application will start on `http://localhost:3000`.
 
-### Advanced Configuration
+### Cypress Testing Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Navigate to Cypress Directory:**
 
-### Deployment
+    ```sh
+    cd ../cypress
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+2. **Run Cypress Tests:**
 
-### `npm run build` fails to minify
+    ```sh
+    npx cypress open
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    This command will open the Cypress Test Runner. You can then run the tests defined in the `cypress/e2e/word_guess_game_spec.cy.js` file.
+
+## Running the Project
+
+1. **Start the Backend Server:**
+
+    Ensure that the backend server is running on `http://localhost:5000`.
+
+2. **Start the Frontend Application:**
+
+    Make sure the frontend application is running on `http://localhost:3000`.
+
+3. **Run Cypress Tests:**
+
+    Open Cypress and run the test cases to ensure everything is working correctly.
+
+## Additional Information
+
+- The project uses a SQLite database to store user information. The database file is created automatically when the backend server runs for the first time.
+- Ensure that both backend and frontend servers are running simultaneously to allow full functionality of the application.
+- Cypress tests include user registration, login, game functionalities, and navigation checks to ensure a robust and error-free application.
+
+## Contributing
+
+Feel free to submit issues and pull requests if you find any bugs or have suggestions for improvements.
+
